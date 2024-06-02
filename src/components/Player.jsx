@@ -98,7 +98,7 @@ export const Player = ({ station, onClose, onNext, onPrev }) => {
         <FaForwardStep size={32} />
       </button>
       <button
-        className="ml-4 px-4 py-2 bg-red-500 rounded hover:bg-red-400"
+        className="ml-1 px-1 py-1 bg-red-500 rounded hover:bg-red-400"
         onClick={onClose}
       >
         Stop
