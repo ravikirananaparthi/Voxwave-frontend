@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        comfortaa: ['Comfortaa', 'cursive'],
+        bricolage: ['Bricolage Grotesque', 'sans-serif'],
+      },
       colors:
       {
         ray:'#201658',
@@ -19,6 +23,11 @@ export default {
         za:'100',
       }
     },
+
   },
   plugins: [],
 }
+
+
+
+      

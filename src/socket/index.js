@@ -1,4 +1,4 @@
-import { io } from "socket.io-client";
+/*import { io } from "socket.io-client";
 
 const socketInit = () => {
   const options = {
@@ -7,7 +7,8 @@ const socketInit = () => {
     timeout: 10000,
     transports: ["websocket"],
   };
-  return io(`https://walkie-talkie-1049.onrender.com/`, options);
+  return io(`http://localhost:4000/`, options);
 };
 
 export default socketInit;
+*/

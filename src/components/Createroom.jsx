@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { SiSocialblade } from "react-icons/si";
-import { FaLockOpen } from "react-icons/fa";
-import { IoLockClosed } from "react-icons/io5";
-
+import { FaLockOpen, FaWindowClose } from "react-icons/fa";
+import { server } from "../main";
 const Createroom = ({ onClose }) => {
   const navigate = useNavigate();
 
@@ -23,58 +21,46 @@ const Createroom = ({ onClose }) => {
         { topic, roomType },
         { withCredentials: true }
       );
-      navigate(`/room/${data._id}`);
+      navigate(`/app/room/${data._id}`);
     } catch (err) {
       console.log(err.message);
     }
   }
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-      <div className="bg-white rounded-lg p-6 w-96">
-        <button onClick={onClose} className="absolute top-0 right-0 mt-2 mr-2">
-          <img src="/images/close.png" alt="close" />
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-75">
+      <div className="relative bg-gray-800 rounded-lg p-6 w-96 shadow-xl">
+        <button
+          onClick={onClose}
+          className="absolute top-0 right-0 mt-2 mr-2 text-gray-400 hover:text-gray-200"
+        >
+          <FaWindowClose className="w-6 h-6" />
         </button>
-        <h3 className="text-xl font-semibold mb-4">
+        <h3 className="text-xl font-semibold mb-4 text-white">
           Enter the topic to be discussed
         </h3>
         <input
           type="text"
           value={topic}
           onChange={(e) => setTopic(e.target.value)}
-          className="border border-gray-300 rounded-md px-4 py-2 mb-4 w-full text-black focus:outline-none focus:border-blue-500"
+          className="border border-gray-600 bg-gray-700 text-white rounded-md px-4 py-2 mb-4 w-full focus:outline-none focus:border-blue-500"
           placeholder="Topic"
         />
-        <h2 className="text-lg font-semibold mb-2">Room types</h2>
-        <div className="flex mb-4">
-          <div
-            className={`mr-4 cursor-pointer text-sky-500`}
-            onClick={() => setRoomType("open")}
+        <h2 className="text-lg font-semibold mb-2 text-white">Room Type</h2>
+        <div className="flex justify-center mb-4">
+          <button className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+            onClick={() => handleTypeSelect("open")}
           >
-            <FaLockOpen className="w-8 h-8" />
-            <span className="ml-2">Open</span>
-          </div>
-          <div
-            className={`mr-4 cursor-pointer text-lime-500`}
-            onClick={() => setRoomType("social")}
-          >
-            <SiSocialblade className="w-8 h-8" />
-            <span className="ml-2">Social</span>
-          </div>
-          <div
-            className={`cursor-pointer text-blue-500 `}
-            onClick={() => setRoomType("private")}
-          >
-            <IoLockClosed className="w-8 h-8" />
-            <span className="ml-2">Private</span>
-          </div>
+            <FaLockOpen className="w-12 h-12 mb-2" />
+            <span className="text-white">Open</span>
+          </button>
         </div>
-        <div className="flex justify-end">
-          <button
-            onClick={createRoom}
-            className="bg-sky-500 hover:bg-sky-600 text-white rounded-md px-4 py-2"
+        <div className="flex justify-center">
+          <button  onClick={createRoom}
+            type="button"
+            class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
           >
-            <span className="ml-2">Let's go</span>
+           Let's go
           </button>
         </div>
       </div>

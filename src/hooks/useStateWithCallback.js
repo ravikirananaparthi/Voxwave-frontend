@@ -19,4 +19,4 @@ export const useStateWithCallback = (intialState) => {
     }, [state]);
 
     return [state, updateState];
-};
+}; 

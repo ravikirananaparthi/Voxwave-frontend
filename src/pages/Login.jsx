@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Link, Navigate } from "react-router-dom"; // Import Link component
-import { Context, server } from "../main";
+import { Context, auth, server } from "../main";
 import toast from "react-hot-toast";
 import axios from "axios";
-
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import l from '../assets/ggg.png';
 function Login() {
   // Define state variables for email and password
   const [email, setEmail] = useState("");
@@ -53,7 +54,33 @@ function Login() {
       setAuth(false);
     }
   };
-  if (isAuthenticated) return <Navigate to={"/wt"} />;
+  const handleClickGoogleSignIn = async (event) => {
+    event.preventDefault();
+
+    try {
+      const provider = new GoogleAuthProvider();
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+
+      const response = await axios.post(`${server}/users/google-login`, {
+        token: user.accessToken,
+      });
+
+      if (response.data.success) {
+        localStorage.setItem('token', response.data.token);
+        axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
+        toast.success(response.data.message);
+        setAuth(true);
+      } else {
+        toast.error(response.data.error);
+        setAuth(false);
+      }
+    } catch (error) {
+      console.error('Error during Google sign-in:', error);
+      toast.error('Login failed. Please try again.');
+    }
+  };
+  if (isAuthenticated) return <Navigate to={"/app/wt"} />;
   return (
     <div className="min-h-screen bg-gray-900 flex justify-center items-center">
       <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
@@ -101,14 +128,28 @@ function Login() {
           >
             Login
           </button>
+          <button className="mx-auto mt-4 flex justify-center" onClick={handleClickGoogleSignIn}>
+            <div className="border-2 bg-gradient-to-r bg-white border-gray-700 font-semibold px-5 py-2 rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:bg-[#3E80ED] transition duration-300 ease-in-out">
+              <img
+                className="h-7 w-7 rounded-full mr-2"
+                src={l}
+                alt=""
+              />
+              <span className="text-black">Sign In with Google</span>
+            </div>
+          </button>
         </form>
         <div className="mt-4">
           <p className="text-gray-400 text-center">
-            Don't have an account?{" "}
-            <Link to="/register" className="text-lime-400">
-              Sign Up
+            Don't have an account?
+          </p>
+          <div className="text-center mt-2">
+          <p>
+            <Link to="/app/register" className="text-lime-400">
+               Sign Up
             </Link>
           </p>
+        </div>
         </div>
       </div>
     </div>
