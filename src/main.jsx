@@ -6,7 +6,7 @@ import { createContext } from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-
+import { inject } from '@vercel/analytics';
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -50,5 +50,5 @@ const Appwraper = () => {
     </Context.Provider>
   );
 };
-
+inject();
 ReactDOM.createRoot(document.getElementById("root")).render(<Appwraper />);

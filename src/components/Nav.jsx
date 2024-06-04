@@ -7,13 +7,13 @@ import { IoMdClose } from "react-icons/io";
 import toast from "react-hot-toast";
 import { signOut } from "firebase/auth";
 import axios from "axios";
+
 export default function Nav() {
   const { isAuthenticated, user, setLoader, setAuth } = useContext(Context);
 
   const [nav, setNav] = useState(false);
 
   const logOutHandler = async () => {
-   
     setLoader(true);
     try {
       await signOut(auth);
@@ -25,7 +25,7 @@ export default function Nav() {
       localStorage.removeItem("token");
       axios.defaults.headers.common["Authorization"] = "";
     } catch (error) {
-      console.log(error)
+      console.log(error);
       toast.error(error.response?.data?.message || "Logout failed"); // Handle potential errors
     } finally {
       setLoader(false);
@@ -35,7 +35,7 @@ export default function Nav() {
     <header className="bg-black py-4 px-6 md:px-8 lg:px-10 flex justify-between items-center ">
       <div className="flex items-center">
         <MicIcon className="h-6 w-6 text-white mr-4 " />
-        <span className="text-white font-medium text-lg hover:text-gray-400 transition-colors duration-300">
+        <span className="text-white font-medium text-lg hover:text-gray-400 transition-colors duration-300 ml-3">
           Voxwave
         </span>
       </div>
@@ -185,20 +185,28 @@ function MenuIcon(props) {
 function MicIcon(props) {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="#ffffff"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
-      <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-      <line x1="12" x2="12" y1="19" y2="22" />
+      <defs>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
+          <feMerge>
+            <feMergeNode in="coloredBlur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+      <g filter="url(#glow)">
+        <path d="M2 13a2 2 0 0 0 2-2V7a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0V4a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0v-4a2 2 0 0 1 2-2" />
+      </g>
     </svg>
   );
 }

@@ -1,31 +1,7 @@
-import radiomirchi from "../assets/mirchi-telugu.png";
-import hum from "../assets/hum.jpg";
-import mix from "../assets/mix.png";
-import melody from "../assets/melody.jpg";
-import london from "../assets/london.jpg";
-import big from "../assets/big.png";
-import che from "../assets/che.png";
-import ml from "../assets/ml.png";
-import mt from "../assets/mt.jpg";
-import rm from "../assets/rm.png";
-import rmh from "../assets/rmh.png";
-import hell from "../assets/hell.png";
-import air from "../assets/air.jpg";
-import arr from "../assets/arr.jpg";
-import ars from "../assets/as.jpg";
-import u1 from "../assets/u11.jpg";
-import harris from "../assets/harris.jpg";
-import ty from "../assets/ty.jpg";
-import ri from "../assets/ri.jpg";
-import mj from "../assets/mj.jpg";
-import tw from "../assets/tw.jpg";
-import ag from "../assets/ag.jpg";
-import jb from "../assets/jb.jpg";
-import ed from "../assets/ed.jpg";
 export const radioStations = [
   {
     name: "Radio Mirchi Telugu",
-    image: radiomirchi,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/mirchi-telugu.png?alt=media&token=43281bce-9ed7-40ad-972e-0be14c42a17f',
     languages: ["Telugu"],
     genre: "Telugu",
     popularity: 5,
@@ -34,7 +10,7 @@ export const radioStations = [
   },
   {
     name: "Humm Fm 106.2",
-    image: hum,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/hum.jpg?alt=media&token=7540da95-5073-4669-8f3a-f1e0c5f7b83f',
     languages: ["Hindi"],
     genre: "Bollywood Music",
     popularity: 4,
@@ -43,7 +19,7 @@ export const radioStations = [
   },
   {
     name: "Arjit Singh Radio",
-    image: ars,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/as.jpg?alt=media&token=6f9c5118-058b-43f5-b4fa-6d8241678d2c',
     languages: ["Hindi", "Telugu"],
     genre: "Artist",
     popularity: 5,
@@ -52,7 +28,7 @@ export const radioStations = [
   },
   {
     name: "London Telugu Radio",
-    image: london,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/london.jpg?alt=media&token=2cd2e3ce-96f5-4f7d-9a8a-4b9c11ed23fe',
     languages: ["Telugu"],
     genre: "Telugu Old Songs",
     popularity: 4,
@@ -61,7 +37,7 @@ export const radioStations = [
   },
   {
     name: "Melody Radio Telugu",
-    image: melody,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/melody.jpg?alt=media&token=a2a8631c-9641-4a2b-a20e-2c51330cfbb5',
     languages: ["Telugu"],
     genre: "Popular Telugu Music",
     popularity: 4,
@@ -70,7 +46,7 @@ export const radioStations = [
   },
   {
     name: "Mixify New Hindi Hits",
-    image: mix,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/mix.png?alt=media&token=8e9afeab-35cc-47e4-9df0-63e955b5b45a',
     languages: ["Hindi"],
     genre: "Popular Hindi Music",
     popularity: 4,
@@ -80,7 +56,7 @@ export const radioStations = [
 
   {
     name: "Big FM 92.7",
-    image: big,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/big.png?alt=media&token=9af1963f-da21-4c7f-bd50-ebbbf8538cf9',
     languages: ["Tamil"],
     genre: "Popular Tamil Music",
     popularity: 4,
@@ -89,7 +65,7 @@ export const radioStations = [
   },
   {
     name: "Hello FM Chennai 106.4",
-    image: hell,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/hell.png?alt=media&token=cccbcf2f-c85b-4f13-b209-b0f5b41a508d',
     languages: ["Tamil"],
     genre: "Popular Tamil Music",
     popularity: 4,
@@ -98,7 +74,7 @@ export const radioStations = [
   },
   {
     name: "Chennai Live 104.8 FM",
-    image: che,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/che.png?alt=media&token=b0d6dd78-fac4-430d-9964-c2c172dd0f7e',
     languages: ["English", "Tamil"],
     genre: "English Music",
     popularity: 4,
@@ -107,7 +83,7 @@ export const radioStations = [
   },
   {
     name: "Mirchi Love",
-    image: ml,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/ml.png?alt=media&token=b79ee041-32b3-4d94-8b2f-a089063bb40c',
     languages: ["Hindi"],
     genre: "Popular Bollywood Music",
     popularity: 4,
@@ -116,7 +92,7 @@ export const radioStations = [
   },
   {
     name: "Mirchi Top 20",
-    image: mt,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/mt.jpg?alt=media&token=eb31c6ae-3d43-44c1-ac83-61f6166fe6f3',
     languages: ["Hindi"],
     genre: "Top 20 Playlist Bollywood",
     popularity: 4,
@@ -125,7 +101,7 @@ export const radioStations = [
   },
   {
     name: "Radio Mirchi 2",
-    image: rm,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/rm.png?alt=media&token=30654e89-c6c8-401e-a675-24b843024994',
     languages: ["Hindi"],
     genre: "Bollywood Music",
     popularity: 4,
@@ -134,7 +110,7 @@ export const radioStations = [
   },
   {
     name: "Radio Mirchi Hindi 102.4",
-    image: rmh,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/rmh.png?alt=media&token=e0050411-f080-4f38-a43d-586cbd808b61',
     languages: ["Hindi"],
     genre: "Bollywood Music",
     popularity: 5,
@@ -143,7 +119,7 @@ export const radioStations = [
   },
   {
     name: "All India Radio Air Visakhapatnam",
-    image: air,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/air.jpg?alt=media&token=3cbcf54d-8fae-45df-ab1d-1c9ea4931ec1',
     languages: ["Hindi", "Telugu"],
     genre: "News",
     popularity: 5,
@@ -152,17 +128,16 @@ export const radioStations = [
   },
   {
     name: "AR Rahman Radio",
-    image: arr,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/arr.jpg?alt=media&token=2a693cbd-9862-40db-bec6-f36d21f0de02',
     languages: ["Tamil", "Hindi", "Telugu"],
     genre: "Artist",
     popularity: 5,
     url: "https://ec5.yesstreaming.net:2320/stream",
     type: "audio/mp3",
   },
-
   {
     name: "Harris Jayaraj Radio",
-    image: harris,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/harris.jpg?alt=media&token=8fbf5826-9626-46fd-ad3e-bfa363d58469',
     languages: ["Tamil", "Telugu"],
     genre: "Artist",
     popularity: 5,
@@ -171,7 +146,7 @@ export const radioStations = [
   },
   {
     name: "Yuvan Shankar Raja Radio",
-    image: u1,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/u11.jpg?alt=media&token=bd0e3d27-b8dc-45d0-a887-dc6c454ae52d',
     languages: ["Tamil", "Telugu"],
     genre: "Artist",
     popularity: 5,
@@ -180,7 +155,7 @@ export const radioStations = [
   },
   {
     name: "Taylor Swift Radio",
-    image: ty,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/ty.jpg?alt=media&token=e8335441-9666-44ce-a24c-71913b7e45cb',
     languages: ["English"],
     genre: "Artist",
     popularity: 5,
@@ -189,7 +164,7 @@ export const radioStations = [
   },
   {
     name: "Rihanna Radio",
-    image: ri,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/ri.jpg?alt=media&token=d52311b0-855c-485e-b038-d98890d80dbb',
     languages: ["English"],
     genre: "Artist",
     popularity: 5,
@@ -198,7 +173,7 @@ export const radioStations = [
   },
   {
     name: "Justin Bieber Radio",
-    image: jb,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/jb.jpg?alt=media&token=19484986-f302-4d50-9d5d-fe89211fde79',
     languages: ["English"],
     genre: "Artist",
     popularity: 5,
@@ -207,7 +182,7 @@ export const radioStations = [
   },
   {
     name: "Michael Jackson Radio",
-    image: mj,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/mj.jpg?alt=media&token=881dffe7-908f-4555-8a90-b1768121c570',
     languages: ["English"],
     genre: "Artist",
     popularity: 5,
@@ -216,7 +191,7 @@ export const radioStations = [
   },
   {
     name: "The Weeknd Radio",
-    image: tw,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/tw.jpg?alt=media&token=86e1a81a-62d9-48db-84b6-ff3cb00af5b1',
     languages: ["English"],
     genre: "Artist",
     popularity: 5,
@@ -225,7 +200,7 @@ export const radioStations = [
   },
   {
     name: "Ariana Grande Radio",
-    image: ag,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/ag.jpg?alt=media&token=6b852f9d-7f69-417c-b9c0-ccbe1bf77c00',
     languages: ["English"],
     genre: "Artist",
     popularity: 5,
@@ -234,7 +209,7 @@ export const radioStations = [
   },
   {
     name: "Ed Sheeran Radio",
-    image: ed,
+    image: 'https://firebasestorage.googleapis.com/v0/b/voxwave-777r.appspot.com/o/ed.jpg?alt=media&token=50a627a9-5238-48f0-9fad-9b2c25601ead',
     languages: ["English"],
     genre: "Artist",
     popularity: 5,

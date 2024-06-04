@@ -150,7 +150,7 @@ const RegisterPage = () => {
         </form>
         <div className="mt-4">
           <p className="text-gray-400 text-center">
-            Don't have an account?{" "}
+            Already have an account?{" "}
             <Link to="/app/login" className="text-lime-400">
               Login
             </Link>

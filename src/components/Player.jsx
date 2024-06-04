@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Hls from 'hls.js';
 import { FaPlayCircle, FaPauseCircle, FaStepBackward } from 'react-icons/fa';
 import { FaForwardStep } from "react-icons/fa6";
-
+import { MdCancel } from "react-icons/md";
 export const Player = ({ station, onClose, onNext, onPrev }) => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -67,12 +67,19 @@ export const Player = ({ station, onClose, onNext, onPrev }) => {
       text
     );
   };
+  const formatText1 = (text) => {
+    return text.split(' ').length > 1 ? (
+      <marquee>{text}</marquee>
+    ) : (
+      text
+    );
+  };
   return (
     <div className="fixed bottom-[55px] sm:bottom-0 left-0 right-0 bg-white/50  p-4 shadow-lg flex items-center z-10 rounded-tr-3xl rounded-tl-3xl backdrop-blur-3xl md:bg-slate-600">
       <img src={station.image} alt={station.name} className="w-16 h-16 object-cover rounded rounded-tl-3xl mr-4" />
       <div className="flex-1">
       <h3 className="text-lg font-bold text-black md:text-white">{formatText(station.name)}</h3>
-        <p className="text-gray-800 md:text-slate-300">{formatText(station.genre)}</p>
+        <p className="text-gray-800 md:text-slate-300">{formatText1(station.genre)}</p>
       </div>
       <button onClick={onPrev} className="text-gray-600 md:text-slate-300 ml-4">
         <FaStepBackward size={32} />
@@ -101,7 +108,7 @@ export const Player = ({ station, onClose, onNext, onPrev }) => {
         className="ml-1 px-1 py-1 bg-red-500 rounded hover:bg-red-400"
         onClick={onClose}
       >
-        Stop
+        <MdCancel />
       </button>
       <audio ref={audioRef} className="hidden" />
     </div>
