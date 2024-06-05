@@ -104,7 +104,7 @@ export default function Nav() {
             />
             <div className="flex items-center p-4 ml-4 mt-3">
               <MicIcon className="h-6 w-6 text-white mr-4 " />
-              <span className="text-white font-medium text-lg hover:text-gray-400 transition-colors duration-300">
+              <span className="text-white font-medium text-lg hover:text-gray-400 transition-colors duration-300 ml-3">
                 Voxwave
               </span>
             </div>{" "}
@@ -149,7 +149,7 @@ export default function Nav() {
                     setNav(!nav);
                   }}
                 >
-                  <li className="text-gray-400 hover:text-redd-800 transition-colors duration-300 text-xl py-4 flex ">
+                  <li className="text-gray-400 hover:text-red-800 transition-colors duration-300 text-xl py-4 flex ">
                     Logout
                   </li>
                 </Link>
