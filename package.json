@@ -21,6 +21,7 @@
     "framer-motion": "^11.2.6",
     "freeice": "^2.2.2",
     "hls.js": "^1.5.8",
+    "lodash.debounce": "^4.0.8",
     "mediaelement": "^7.0.5",
     "peerjs": "^1.5.2",
     "react": "^18.2.0",
